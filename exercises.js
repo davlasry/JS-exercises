@@ -1,8 +1,8 @@
-const word1 = "radar";
-const word2 = "i";
-const word3 = "aa";
-const word4 = "ab";
-const word5 = "adsfds";
+const word1 = 'radar';
+const word2 = 'i';
+const word3 = 'aa';
+const word4 = 'ab';
+const word5 = 'adsfds';
 
 // const isPolyndrom = (string) => {
 //   for (let i = 0; i < string.length / 2; i++) {
@@ -53,7 +53,7 @@ const getFirstUniqueLetterInString = (string) => {
 
   let resultLetter;
 
-  for (const [_key, value] of Object.entries()) {
+  for (const [, value] of Object.entries()) {
     if (
       value.isUnique &&
       (!resultLetter ||
