@@ -5,14 +5,14 @@
 
 const findMissingNumberInArray = (array) => {
   const minValue = Math.min(array);
-  const maxValue = Math.max(array);
 
   const numbersArray = [];
   for (let i = 0; i < array.length; i++) {
-    numbersArray[array[i]] = true;
+    numbersArray[array[i] - minValue] = true;
   }
 
-  return numbersArray.findIndex((number) => !!number);
+  return numbersArray.findIndex((isExist) => !isExist) + minValue;
 };
 
-[false, false, true, false, true, true];
+[3, 4, 6, 7, 8];
+[true, true, undefined, true, true, true];
