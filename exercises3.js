@@ -1,3 +1,5 @@
+/** 25.05.2020 */
+
 // 3, 6, 4 (3-6, 5)  => [3, 4, 6]
 // 3, 5, 6 (3-6, 4)
 // 2, 5, 4, 6 (2-6, 3)
@@ -6,12 +8,19 @@
 const findMissingNumberInArray = (array) => {
   const minValue = Math.min(array);
 
-  const numbersArray = [];
+  const isExistArray = [];
   for (let i = 0; i < array.length; i++) {
-    numbersArray[array[i] - minValue] = true;
+    isExistArray[array[i] - minValue] = true;
   }
 
-  return numbersArray.findIndex((isExist) => !isExist) + minValue;
+  let missingNumbers = [];
+  isExistArray.forEach((isExist, index) => {
+    if (!isExist) {
+      missingNumbers.push(index + minValue);
+    }
+  });
+
+  return missingNumbers;
 };
 
 [3, 4, 6, 7, 8];

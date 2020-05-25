@@ -1,3 +1,5 @@
+/** 18.05.2020 */
+
 // Function that returns the longest substring without duplicate characters
 const longestSubstring = (string) => {
   let longestSubstringWithoutDuplicate = '';
